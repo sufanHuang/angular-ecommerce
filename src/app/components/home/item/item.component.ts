@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { SaleItem } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-item',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./item.component.css']
 })
 export class ItemComponent implements OnInit {
+  @Input() item: SaleItem = {};
 
-  constructor() { }
+  @Output() cartAdd = new EventEmitter<any>();
 
-  ngOnInit() {
+  constructor() {}
+
+  ngOnInit() {}
+
+  addtoCart($event) {
+    this.cartAdd.emit($event);
   }
-
 }

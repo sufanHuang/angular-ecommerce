@@ -10,6 +10,7 @@ import { FooterComponent } from './components/home/footer/footer.component';
 import { SidebarComponent } from './components/home/sidebar/sidebar.component';
 import { HeaderComponent } from './components/home/header/header.component';
 import { ItemComponent } from './components/home/item/item.component';
+import { SwitchComponent } from './components/home/sidebar/switch/switch.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ItemComponent } from './components/home/item/item.component';
     FooterComponent,
     SidebarComponent,
     HeaderComponent,
-    ItemComponent
+    ItemComponent,
+    SwitchComponent
   ],
   imports: [
     BrowserModule,
