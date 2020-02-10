@@ -1,5 +1,5 @@
-<div>
-  <nav>
+<div class="navarea">
+  <nav class="capsule">
     <a>
       <h2> Sufan Shop</h2>
     </a>
@@ -8,9 +8,10 @@
       <li><a (click)="navigate('men')">Men's</a></li>
       <li><a (click)="navigate('sale')">Sale</a></li>
     </ul>
-    <a [routerLink]="['/cart']">
-      <div *ngIf="cartTotal > 0">{{ cartTotal}}</div>
-    </a>
-  </nav>
 
+    <i class="fa fa-shopping-cart cartitem"><a [routerLink]="['/cart']">
+      <div *ngIf="cartTotal > 0">{{ cartTotal}}</div>
+    </a></i>
+
+  </nav>
 </div>
