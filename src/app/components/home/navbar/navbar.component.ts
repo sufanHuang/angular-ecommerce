@@ -13,6 +13,7 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit() {
   }
+
   navigate(category: string){
     this.router.navigate(['home'],{
       queryParams: { category}
