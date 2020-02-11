@@ -1,7 +1,7 @@
 <div class="navarea">
   <nav class="capsule">
     <a>
-      <h2> Sufan Shop</h2>
+      <h2> SHOES</h2>
     </a>
     <ul>
       <li><a (click)="navigate('women')">Women's</a></li>
@@ -9,9 +9,11 @@
       <li><a (click)="navigate('sale')">Sale</a></li>
     </ul>
 
-    <i class="fa fa-shopping-cart cartitem"><a [routerLink]="['/cart']">
-      <div *ngIf="cartTotal > 0">{{ cartTotal}}</div>
-    </a></i>
-
+    <a [routerLink]="['/cart']">
+      <div class="cartitem">
+        <div *ngIf="cartTotal > 0" class="cartcount">{{ cartTotal}}</div>
+        <i class="fa fa-shopping-cart cartitem"></i>
+      </div>
+    </a>
   </nav>
 </div>

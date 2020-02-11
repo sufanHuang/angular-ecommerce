@@ -150,12 +150,12 @@ export class DataService {
       },
       {
         id: 9,
-        name: 'Nike Black',
+        name: 'New Balance Blue',
         price: 59.99,
         category: 'men',
         sale: true,
         article: 'shoe',
-        img: 'img9.jpg'
+        img: 'img14.jpg'
       },
       {
         id: 10,
@@ -177,12 +177,12 @@ export class DataService {
       },
       {
         id: 12,
-        name: 'Hoka Blue',
+        name: 'Asics Yellow',
         price: 59.99,
         category: 'men',
         sale: true,
         article: 'shoe',
-        img: 'img12.jpg'
+        img: 'img13.jpg'
       }
     ];
   }

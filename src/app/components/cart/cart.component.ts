@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { CartItem, DataService } from 'src/app/services/data.service';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-cart',
@@ -6,10 +9,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
+  cartItems$: Observable<CartItem[]>;
+  cartTotal = 0;
 
-  constructor() { }
+  constructor(private dataSvc: DataService) {}
 
   ngOnInit() {
+    this.cartItems$ = this.dataSvc.getObservableCart().pipe(
+      map(res => {
+        res.map(res => {
+          this.cartTotal += res.price * (res.count || 1);
+        });
+        return res;
+      })
+    );
   }
-
 }
+
